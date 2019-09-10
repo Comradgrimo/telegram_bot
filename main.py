@@ -1,10 +1,10 @@
 
-def bot(ip,port):
+def bot(ip):
     import telebot
     from grab import Grab
     g = Grab()
-    print("Подключаюсь по:",ip,':', port)
-    telebot.apihelper.proxy = {'https':'socks5://'+ ip +':'+port}
+    print("Подключаюсь по:",ip)
+    telebot.apihelper.proxy = {'https':'socks5://'+ str(ip)}
     bot = telebot.TeleBot('869397424:AAFktmawEJeoEUGejehBuBET4xfumC63ID4')
 
     @bot.message_handler(commands=['start'])

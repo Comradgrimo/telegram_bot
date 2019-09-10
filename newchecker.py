@@ -1,10 +1,10 @@
 import socket
 
-ip = '118.24.63.167'
-port = '1113'
+ip = '199.189.27.34'
+port = '1080'
 
 s = socket.socket()
-s.settimeout(10000)  ### сколько ждать соеденения с портом прокси
+s.settimeout(1000)  ### сколько ждать соеденения с портом прокси
 print('try proxy', ip + ':' + port)
 try:
     s.connect((ip, int(port)))
